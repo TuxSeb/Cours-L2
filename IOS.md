@@ -100,4 +100,5 @@
 |enable     |                              |
 |config-t      |                               |
 |hostname S1       |attribue le nom S1 à l'hôte                               |
+|enable password class|attribue le mot de passe class au mode enable|
 | ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte                 |
