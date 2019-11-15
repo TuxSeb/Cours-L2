@@ -101,4 +101,19 @@
 |config-t      |                               |
 |hostname S1       |attribue le nom S1 à l'hôte                               |
 |enable password class|attribue le mot de passe class au mode enable|
-| ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte                 |
+|line console 0|permet de modifier les paramètres du port console|
+|password cisco|met le mdp cisco au port console|
+|login| oblige la connexion via le mdp|
+|exit||
+|line vty 0 5||
+|password cisco|met le mdp cisco au vty|
+|login| oblige la connexion via le mdp|
+|exit||
+|banner motd 'Warning'|Affiche warning a la connexion|
+|exit|quitte config t|
+|copy running-config startup-config||
+|config t||
+|interface g0/0||
+| ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte|
+|no shutdown||
+|end||
