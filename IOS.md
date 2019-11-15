@@ -90,8 +90,14 @@
 
 ## Exemple
 
-#### Définir une adresse IP  
+#### Définir une adresse IP
+
+
+
+#### Exemple de configuration de base
 | Commande         | effet                                                        |
 | ---------------- | ------------------------------------------------------------ |
+|enable     |                              |
+|config-t      |                               |
+|hostname S1       |attribue le nom S1 à l'hôte                               |
 | ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte                 |
-|       |                               |
