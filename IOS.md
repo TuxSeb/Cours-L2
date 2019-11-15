@@ -60,7 +60,7 @@
 | `interface g0/1`       | Global Config(3)     | entre dans l'interface de configuration pour Gigabit Ethernet 0/1 |
 | `ip address IP/prefix` | Interface config(4a) | défini l'adresse IPv4 de l'interface                         |
 | `no shut`              | Interface config(4a) | Allume l'interface                                           |
-| ``                     |                      |                                                              |
+|                        |                      |                                                              |
 
 
 
@@ -97,24 +97,24 @@
 #### Exemple de configuration de base
 | Commande         | effet                                                        |
 | ---------------- | ------------------------------------------------------------ |
-|enable     |                              |
-|config-t      |                               |
-|hostname S1       |attribue le nom S1 à l'hôte                               |
-|enable password class|attribue le mot de passe class au mode enable|
-|line console 0|permet de modifier les paramètres du port console|
-|password cisco|met le mdp cisco au port console|
-|login| oblige la connexion via le mdp|
-|exit||
-|line vty 0 5||
-|password cisco|met le mdp cisco au vty|
-|login| oblige la connexion via le mdp|
-|exit||
-|banner motd 'Warning'|Affiche warning a la connexion|
-|service password encryption||
-|exit|quitte config t|
-|copy running-config startup-config||
-|config t||
-|interface g0/0||
-| ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte|
-|no shutdown||
-|end||
+|`enable`    |                              |
+|`config-t`      |                               |
+|`hostname S1`       |attribue le nom S1 à l'hôte                               |
+|`enable password class`|attribue le mot de passe class au mode enable|
+|`line console 0`|permet de modifier les paramètres du port console|
+|`password cisco`|met le mdp cisco au port console|
+|`login`| oblige la connexion via le mdp|
+|`exit`||
+|`line vty 0 5`||
+|`password cisco`|met le mdp cisco au vty|
+|`login`| oblige la connexion via le mdp|
+|`exit`||
+|`banner motd 'Warning' `|Affiche warning a la connexion|
+|`service password encryption`||
+|`exit`|quitte config t|
+|`copy running-config startup-config`| sauvegarde la configuration du running dans la mémoire du startup|
+|`config t`||
+|`interface g0/0`||
+| `ip address 192.168.1.2 255.255.255.0`| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte|
+|`no shutdown`||
+|`end`||
