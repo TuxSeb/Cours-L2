@@ -110,6 +110,7 @@
 |login| oblige la connexion via le mdp|
 |exit||
 |banner motd 'Warning'|Affiche warning a la connexion|
+|service password encryption||
 |exit|quitte config t|
 |copy running-config startup-config||
 |config t||
