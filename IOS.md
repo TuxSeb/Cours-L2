@@ -4,15 +4,15 @@
 
 #### Différent niveau d'administration
 
-| **Niveau** | Mode             | Affichage              |
-| ---------- | ---------------- | ---------------------- |
-| 1          | User EXEC        | `Device>`              |
-| 2          | Privileged Exec  | `Device#`              |
-| 3          | Global Config    | `Device(config)#`      |
-| 4a         | Interface Config | `Device(config-if)#`   |
-| 4b         | Line Config      | `Device(config-line)#` |
+| **Niveau** | Mode             | Affichage              | Commande utilisé    |
+| ---------- | ---------------- | ---------------------- |--------------------|
+| 1          | User EXEC        | `Device>`              |                    |
+| 2          | Privileged Exec  | `Device#`              |enable              |
+| 3          | Global Config    | `Device(config)#`      |config-terminal (config-t)|
+| 4a         | Interface Config | `Device(config-if)#`   |interface [vlan1 par exemple]|
+| 4b         | Line Config      | `Device(config-line)#` |line console [nb]    |
 
-(`Device` pouvant être remplacé par un nom hôte donné)
+(`Device` est remplacé par le nom de l'hôte donné)
 
 #### Commandes générales
 
@@ -91,4 +91,7 @@
 ## Exemple
 
 #### Définir une adresse IP  
-
+| Commande         | effet                                                        |
+| ---------------- | ------------------------------------------------------------ |
+| ip address 192.168.1.2 255.255.255.0| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte                 |
+|       |                               |
