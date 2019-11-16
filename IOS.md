@@ -103,18 +103,23 @@
 |`enable password class`|attribue le mot de passe class au mode enable|
 |`line console 0`|permet de modifier les paramètres du port console|
 |`password cisco`|met le mdp cisco au port console|
+|`no ip domain-lookup`|désactive la recherche auto dns|
 |`login`| oblige la connexion via le mdp|
-|`exit`||
-|`line vty 0 5`||
+|`exit`|quitte le config console|
+|`line vty 0 5`|config vty|
 |`password cisco`|met le mdp cisco au vty|
 |`login`| oblige la connexion via le mdp|
-|`exit`||
+|`exit`|quitte vty|
 |`banner motd 'Warning' `|Affiche warning a la connexion|
-|`service password encryption`||
-|`exit`|quitte config t|
-|`copy running-config startup-config`| sauvegarde la configuration du running dans la mémoire du startup|
-|`config t`||
-|`interface g0/0`||
-| `ip address 192.168.1.2 255.255.255.0`| Attribue l'adresse ipv4 192.168.1.2 avec son masque à l'hôte|
+|`service password encryption`|encrypte les mdp|
+|`interface g0/0`|config le port g0/0|
+| `ipv6 address 2001:DB8:ACAD::1/64`| Attribue l'adresse ipv6 au port g0/0|
+|`no shutdown`||
+|`exit`||
+|`interface s0/0/1`||
+| `ipv6 address 2001:DB8:ACAD:2::1/64`| Attribue l'adresse ipv6 au port s0/0/1|
+| `ipv4 address 172.16.1.12 255.255.255.252`| Attribue l'adresse ipv4 au port s0/0/1|
 |`no shutdown`||
 |`end`||
+|`copy running-config startup-config`| sauvegarde la configuration du running dans la mémoire du startup|
+|`show running-config`||
