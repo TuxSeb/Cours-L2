@@ -132,7 +132,7 @@
 |`config-t`      |                               |
 |`hostname R1`       |attribue le nom R1 à l'hôte                               |
 |`ip domain-name R1.com`|met le nom de domain|
-|`username pi password me`|créé l'utilisateur pi avec mdp me|
+|`username pi password me privilege 15`|créé l'utilisateur pi avec mdp me|
 |`crypto key generate rsa`|génére rsa key (demande la taille apres)|
 |`login block-for 180 attempts 4 within 120`| block qqun 3 min qui a échoué apres 4 essai en 2min|
 |`line vty 0 4`|config vty|
