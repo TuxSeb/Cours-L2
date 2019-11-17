@@ -123,3 +123,20 @@
 |`end`||
 |`copy running-config startup-config`| sauvegarde la configuration du running dans la mémoire du startup|
 |`show running-config`||
+
+
+#### Configuration SSH
+| Commande         | effet                                                        |
+| ---------------- | ------------------------------------------------------------ |
+|`enable`    |                              |
+|`config-t`      |                               |
+|`hostname R1`       |attribue le nom R1 à l'hôte                               |
+|`ip domain-name R1.com`|met le nom de domain|
+|`username pi password me`|créé l'utilisateur pi avec mdp me|
+|`crypto key generate rsa`|génére rsa key (demande la taille apres)|
+|`login block-for 180 attempts 4 within 120`| block qqun 3 min qui a échoué apres 4 essai en 2min|
+|`line vty 0 4`|config vty|
+|`transport input ssh`|ssh acces|
+|`login local`| utilise le profil utilisateur local|
+|`end`|quitte vty|
+|`copy run start`|sauvegarde la nvram|
