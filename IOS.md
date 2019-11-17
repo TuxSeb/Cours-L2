@@ -116,6 +116,7 @@
 | `ipv6 address 2001:DB8:ACAD::1/64`| Attribue l'adresse ipv6 au port g0/0|
 |`no shutdown`||
 |`exit`||
+|`ip default-gateway 192.168.0.1`|met la gateway|
 |`interface s0/0/1`||
 | `ipv6 address 2001:DB8:ACAD:2::1/64`| Attribue l'adresse ipv6 au port s0/0/1|
 | `ipv4 address 172.16.1.12 255.255.255.252`| Attribue l'adresse ipv4 au port s0/0/1|
