@@ -137,6 +137,7 @@
 |`login block-for 180 attempts 4 within 120`| block qqun 3 min qui a échoué apres 4 essai en 2min|
 |`line vty 0 4`|config vty|
 |`transport input ssh`|ssh acces|
+|`exec-timeout 300`|kick l'utilisateur au bout de 300s|
 |`login local`| utilise le profil utilisateur local|
 |`end`|quitte vty|
 |`copy run start`|sauvegarde la nvram|
