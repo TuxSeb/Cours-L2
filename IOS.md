@@ -1,8 +1,14 @@
 # Ios Réseau
 
+
+
+# Partie 1 
+
+
+
 ## Commandes
 
-#### Différent niveau d'administration
+#### Différents niveaux d'administration
 
 | **Niveau** | Mode             | Affichage              | Commande utilisé    |
 | ---------- | ---------------- | ---------------------- |--------------------|
@@ -142,3 +148,77 @@
 |`login local`| utilise le profil utilisateur local|
 |`end`|quitte vty|
 |`copy run start`|sauvegarde la nvram|
+
+# Partie 2 
+
+### Listes de controle (Access Control List) sur Routeurs
+
+> Les ACL servent à définir l'autorisation ou le rejet de paquets en fonction de leur adresse source.
+
+#### Creer une ACL
+
+##### `enable` => `conf t`
+
+| Commande                                                     |                            Effets                            |
+| :----------------------------------------------------------- | :----------------------------------------------------------: |
+| access-list `numéro`             (`permit`|`deny`)  (`any` | `reseau ` `masque`) | Liste d'accès portant le `numéro` refusant ou acceptant a l'interface qui porte l'ACL l'accès au reseaux nommé `reseau` |
+
+#### **Appliquer l'ACL:** 
+
+##### `enable` => `conf t` => une interface (`interface <nom_de l'interface>`) 
+
+| Commande                                  | Effet                                                        |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| ip access-group `numero_acl` (`out`|`in`) | Applique l'ACL  `numero_acl` en entrée/sortie (out/in) sur l'interface choisie |
+
+#### Exemple: 
+
+Topologie suivante:
+
+![image-20200422221419242](./images/exemple1.png)
+
+![image-20200422221419242](./images/table_adressage1.png)
+
+
+
+| Commande                                  | Effet                                                        |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| access-list 1 deny 192.168.10.0 0.0.0.255 | instruction refusant l’accès au réseau 192.168.30.0/24 à partir du réseau 192.168.10.0/24. |
+| access-list 1 permit any                  | Autorise tout autre trafic sur l'ACL 1 (c'est l'inverse pas défaut) |
+| ip access-group 1 out                     | Applique l'ACL 1 sur l'interface choisie (GigabithEthernet 0/0), en traffic sortant de l'interface (Routeur **R3**) |
+
+#### ACL sur VTY 
+
+##### Creer l'ACL
+
+###### `enable` => `config t` 
+
+| Commande                                    | Effet                                                        |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| access-list `numéro` (`permit`| ) host `ip` | Autorise l'accès Telnet pour l'hote portant l'adresse **IP ** |
+
+###### `enable` => `line vty 0 15`
+
+| Commande                           | Effet |
+| ---------------------------------- | ----- |
+| access-class `numero` (`in`|`out`) |       |
+
+###### Exemple: accès du Telnet sur un routeur
+
+
+
+![image](./images/exemple2.png)
+
+| Mode           | Effet                                                      | Commande                            |
+| -------------- | ---------------------------------------------------------- | ----------------------------------- |
+| (config)#      | creer l'ACL numéro 99 autorisant l'accès a l'hote 10.0.0.1 | access-list 99 permit host 10.0.0.1 |
+| (config line)# | Mise en place de l'ACL sur le `VTY 0 15`                   | access-class 99 in                  |
+
+### afficher les ACL sur un routeur
+
+| Commande                      | effet                                                        |
+| ----------------------------- | ------------------------------------------------------------ |
+| show access-list              | montre la configuration des listes ACL                       |
+| show run                      | montre la running config avec les ACL et les interfaces qui ont ou non des ACL |
+| show ip interface `interface` | montre l'interface `interface` (donc on peut voir si ACL il y a) |
+
