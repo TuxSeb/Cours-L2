@@ -22,9 +22,9 @@
 
 **Topologie suivante:**
 
-![image-20200422221419242](/home/sebastien/Cours-L2/reseau/images/exemple1.png)
+![Topologie](./images/exemple1.png)
 
-![image-20200422221419242](/home/sebastien/Cours-L2/reseau/images/table_adressage1.png)
+![Table d'adressage](./images/table_adressage1.png)
 
 
 
@@ -54,7 +54,7 @@
 
 
 
-![image](/home/sebastien/Cours-L2/reseau/images/exemple2.png)
+![Topologie et table d'adressage](./images/exemple2.png)
 
 | Mode           | Effet                                                      | Commande                            |
 | -------------- | ---------------------------------------------------------- | ----------------------------------- |

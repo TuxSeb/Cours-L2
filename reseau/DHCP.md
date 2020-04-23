@@ -50,11 +50,11 @@ Dans le routeur, choisir une interface
 
 ### Exemple
 
-![exemple](/home/sebastien/Cours-L2/reseau/images/exemple3.png)
+![reseau en exemple](./images/exemple3.png)
 
 #### Solution, aller dans R1 puis: 
 
-![image-20200423215832142](/home/sebastien/Cours-L2/reseau/images/commandes_dhcp.png)
+![Commandes DHCP helper](./images/commandes_dhcp.png)
 
 ##  Configurer un routeur en tant que client DHCP
 
